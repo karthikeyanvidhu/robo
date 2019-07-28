@@ -15,7 +15,7 @@ public class RoboApplication {
 	}
 	
 	@GetMapping("/")
-    public String hello() { 
+    public String hello() {
             return "Hello Spring Boot!";
     }
 	
