@@ -1,8 +1,5 @@
 package com.example.robo;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +25,17 @@ public class RoboStatusService {
 		rs.setId(1);
 		rs.setName("robo");
 		rs.setStatus("OFF");
-		rs.setDirection("");
+		rs.setAction("");
+		System.out.println(rs);
+		roborepo.save(rs);
+	}
+	
+	public void on() {
+		RoboStatus rs=new RoboStatus();
+		rs.setId(1);
+		rs.setName("robo");
+		rs.setStatus("ON");
+		rs.setAction("FRONT");
 		System.out.println(rs);
 		roborepo.save(rs);
 	}
@@ -38,7 +45,7 @@ public class RoboStatusService {
 		rs.setId(1);
 		rs.setName("robo");
 		rs.setStatus("ON");
-		rs.setDirection("LEFT");
+		rs.setAction("LEFT");
 		System.out.println(rs);
 		roborepo.save(rs);
 	}
@@ -48,7 +55,7 @@ public class RoboStatusService {
 		rs.setId(1);
 		rs.setName("robo");
 		rs.setStatus("ON");
-		rs.setDirection("RIGHT");
+		rs.setAction("RIGHT");
 		System.out.println(rs);
 		roborepo.save(rs);
 	}
@@ -58,7 +65,7 @@ public class RoboStatusService {
 		rs.setId(1);
 		rs.setName("robo");
 		rs.setStatus("ON");
-		rs.setDirection("FRONT");
+		rs.setAction("FRONT");
 		System.out.println(rs);
 		roborepo.save(rs);
 	}
@@ -68,8 +75,29 @@ public class RoboStatusService {
 		rs.setId(1);
 		rs.setName("robo");
 		rs.setStatus("ON");
-		rs.setDirection("BACK");
+		rs.setAction("BACK");
 		System.out.println(rs);
 		roborepo.save(rs);
 	}
+	
+	public void search() {
+		RoboStatus rs=new RoboStatus();
+		rs.setId(1);
+		rs.setName("robo");
+		rs.setStatus("ON");
+		rs.setAction("SEARCH");
+		System.out.println(rs);
+		roborepo.save(rs);
+	}
+	
+	public void fire() {
+		RoboStatus rs=new RoboStatus();
+		rs.setId(1);
+		rs.setName("robo");
+		rs.setStatus("ON");
+		rs.setAction("FIRE");
+		System.out.println(rs);
+		roborepo.save(rs);
+	}
+	
 }

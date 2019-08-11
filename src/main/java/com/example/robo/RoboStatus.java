@@ -17,7 +17,7 @@ public class RoboStatus {
 	private Integer id;
 	private String name;
 	private String status;
-	private String direction;
+	private String action;
 	
 	
 	public RoboStatus() {
@@ -30,7 +30,7 @@ public class RoboStatus {
 		this.id = id;
 		this.name = name;
 		this.status = status;
-		this.direction = direction;
+		this.action = direction;
 	}
 	
 	public Integer getId() {
@@ -51,16 +51,16 @@ public class RoboStatus {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public String getDirection() {
-		return direction;
+	public String getAction() {
+		return action;
 	}
-	public void setDirection(String direction) {
-		this.direction = direction;
+	public void setAction(String action) {
+		this.action = action;
 	}
 
 	@Override
 	public String toString() {
-		return "RoboStatus [id=" + id + ", name=" + name + ", status=" + status + ", direction=" + direction + "]";
+		return "RoboStatus [id=" + id + ", name=" + name + ", status=" + status + ", action=" + action + "]";
 	}
 	
 	

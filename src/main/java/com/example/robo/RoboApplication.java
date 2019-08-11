@@ -1,7 +1,5 @@
 package com.example.robo;
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -29,13 +27,19 @@ public class RoboApplication {
 	@GetMapping("/direction")
 	public String direction() {
 		RoboStatus rs=rss.status();
-		return rs.getStatus()+"|"+rs.getDirection();
+		return rs.getAction()+"|"+rs.getStatus();
 	}
 	
 	@RequestMapping(method=RequestMethod.GET,value="/off")
 	public String off() {
 		rss.off();
 		return "Internet mode Switched Off";
+	}
+	
+	@RequestMapping(method=RequestMethod.GET,value="/on")
+	public String on() {
+		rss.on();
+		return "Internet mode Switched On";
 	}
 	
 	@RequestMapping(method=RequestMethod.GET,value="/front")
@@ -60,6 +64,18 @@ public class RoboApplication {
 	public String left() {
 		rss.left();
 		return "left movement initiated";
+	}
+	
+	@RequestMapping(method=RequestMethod.GET,value="/search")
+	public String search() {
+		rss.search();
+		return "search initiated";
+	}
+	
+	@RequestMapping(method=RequestMethod.GET,value="/fire")
+	public String fire() {
+		rss.fire();
+		return "search initiated";
 	}
 	
 	
